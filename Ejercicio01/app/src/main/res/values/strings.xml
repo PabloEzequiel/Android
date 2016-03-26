@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Ejercicio 01</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello world Fragmetns!</string>
     <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_fragment_01">Hello fragmento uno (1)</string>
+    <string name="hello_fragment_02">Hello fragmento dos (2)</string>
 </resources>
