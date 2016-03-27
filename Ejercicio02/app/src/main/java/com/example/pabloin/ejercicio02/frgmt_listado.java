@@ -7,6 +7,14 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.example.pabloin.ejercicio02.core.Producto;
+import com.example.pabloin.ejercicio02.core.ProductoAdapter;
+import com.example.pabloin.ejercicio02.core.ProductoFactory;
+
+import java.util.List;
 
 
 /**
@@ -18,6 +26,36 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class frgmt_listado extends Fragment {
+
+
+    private ListView listaProductos;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        Activity mainActivity = super.getActivity();
+
+        // Modificamos el texto:
+        TextView tv = (TextView)  mainActivity.findViewById(R.id.texto_hello);
+
+        tv.setText("Hola Texto Fragmento 1 modificado");
+
+
+        // Recuperamos el adapter Java:
+        List<Producto> productos = ProductoFactory.getInstance();
+
+        ProductoAdapter adapter = new ProductoAdapter(productos);
+
+
+        // Recuperamos el ListView
+
+        listaProductos = (ListView) mainActivity.findViewById(R.id.lista_productos);
+         listaProductos.setAdapter(adapter);
+
+    }
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -78,6 +116,10 @@ public class frgmt_listado extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
+
+
+        // listaProductos =
+
         /*
         try {
             mListener = (OnFragmentInteractionListener) activity;
@@ -93,6 +135,8 @@ public class frgmt_listado extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+
 
     /**
      * This interface must be implemented by activities that contain this
