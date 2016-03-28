@@ -7,8 +7,10 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.pabloin.ejercicio02.core.Producto;
 import com.example.pabloin.ejercicio02.core.ProductoAdapter;
@@ -27,23 +29,36 @@ import java.util.List;
  */
 public class frgmt_listado extends Fragment {
 
-
     private ListView listaProductos;
+
+    private Callback callback; // Es el context de esta clase, y también el MainActivity
+
+    // Callback que obligo a implementar en MainActivity
+    public interface Callback {
+        public void onProductoSelected (Producto producto);
+    }
 
     @Override
     public void onStart() {
         super.onStart();
 
-        Activity mainActivity = super.getActivity();
+        MainActivity mainActivity = (MainActivity) super.getActivity();
 
-        // Modificamos el texto:
+        // mainActivity.cambiarTextos();
+
+        /*
+        // Modificamos el texto (Fragmento I):
         TextView tv = (TextView)  mainActivity.findViewById(R.id.texto_hello);
-
         tv.setText("Hola Texto Fragmento 1 modificado");
+
+        // Modificamos el texto (Fragmento II):
+        TextView tv2 = (TextView)  mainActivity.findViewById(R.id.texto_detalle);
+        tv2.setText("Hola Texto Fragmento 2 modificado");
+        */
 
 
         // Recuperamos el adapter Java:
-        List<Producto> productos = ProductoFactory.getInstance();
+        final List<Producto> productos = ProductoFactory.getInstance();
 
         ProductoAdapter adapter = new ProductoAdapter(productos);
 
@@ -51,9 +66,31 @@ public class frgmt_listado extends Fragment {
         // Recuperamos el ListView
 
         listaProductos = (ListView) mainActivity.findViewById(R.id.lista_productos);
-         listaProductos.setAdapter(adapter);
+        listaProductos.setAdapter(adapter);
+
+        // Atach del evento OnClick
+        listaProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Producto productoSelected = (Producto) listaProductos.getItemAtPosition(position);
+
+                callback.onProductoSelected(productoSelected);
+
+//                Toast.makeText(parent.getContext(),
+//                            "Producto Seleccionado: " + productoSelected.getNombre(),
+//                             Toast.LENGTH_SHORT).show();
+
+
+            }
+
+        });
 
     }
+
+
+
+
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -116,9 +153,7 @@ public class frgmt_listado extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
-
-
-        // listaProductos =
+        callback = (Callback) activity;
 
         /*
         try {

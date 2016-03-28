@@ -94,8 +94,20 @@ public class ProductoAdapter extends BaseAdapter {
 
         Log.d(TAG, "ProductoAdapter.getView()");
 
-        View view = LayoutInflater.from(parent.getContext())
-                       .inflate(R.layout.adapter_listado_producto, parent, false);
+
+        // Para los scroll, evitamos que se generen demaciados objetos:
+        // El convertView es la priemar vista que sale de pantalla, asique recilcamos el objeto.
+        // y no hacemos new,
+        View view;
+
+        if (convertView == null) {
+            view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.adapter_listado_producto, parent, false);
+
+        } else {
+
+            view = convertView;
+        }
 
         Producto p = productos.get(position);
 

@@ -8,6 +8,7 @@
     <string name="hello_fragment_listado">hello_fragment_listado</string>
     <string name="hello_fragment_detalle">hello_fragment_detalle</string>
 
+
     <string name="listado_producto_id">1</string>
     <string name="listado_producto_nombre">Diario</string>
     <string name="listado_producto_precio">$25</string>

@@ -1,13 +1,55 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
     android:background="@color/material_blue_grey_800"
-    tools:context="com.example.pabloin.ejercicio02.frgmt_detalle">
+    tools:context="com.example.pabloin.ejercicio02.frgmt_detalle"
+    android:weightSum="1">
 
-    <!-- TODO: Update blank fragment layout -->
+
+
+
     <TextView
+        android:id="@+id/texto_id"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_fragment_detalle" />
+        android:layout_height="39dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:text="11" />
 
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/texto_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:text="22"
+        android:textSize="@dimen/abc_text_size_large_material" />
+
+    <TextView
+        android:id="@+id/texto_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:text="33"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_weight="0.04" />
+
+
+    <TextView
+        android:id="@+id/texto_precio"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:text="44" />
+
+</LinearLayout>
