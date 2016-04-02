@@ -6,7 +6,7 @@ Distintos Ejercicios de Android:
 - Laboratorio 01 (In Progres)
 - Ejercicio 01: (Cerrado)
 - Ejercicio 02: En branch
-- Ejercicio 03: En branch
+
 
 Estado:
 
@@ -20,4 +20,3 @@ Estado:
                 
 - Ejercicio 02: Tiene su propio branch, hacia algo con Fragments
 
-- Ejercicio 03: Tiene su propio branch, es un intento de conectarse a una base de datos y recuperar una imágenes.
