@@ -2,19 +2,32 @@ package com.example.pabloin.ejercicio02;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.pabloin.ejercicio02.core.Producto;
+import com.example.pabloin.ejercicio02.core.ProductoAdapter;
 
 public class MainActivity extends AppCompatActivity
         implements frgmt_listado.Callback {
+
+
+    private static final String TAG = ProductoAdapter.class.getSimpleName();
+
+    private boolean esTablet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (findViewById(R.id.texto_titulo_tablet)!=null) {
+            esTablet = true;
+        }
+
+        Log.d(TAG, "Es Tablet " + esTablet);
     }
 
     @Override

@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Ejercicio02</string>
 
-    <string name="hello_world">Juguetería: Listado Productos</string>
+    <string name="texto_titulo_celular">Juguetería (Celular): Listado Productos</string>
+    <string name="texto_titulo_tablet">Juguetería (Tablet): Listado Productos</string>
+
     <string name="action_settings">Settings</string>
 
 <!-- TODO: Remove or change this placeholder text -->
