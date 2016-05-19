@@ -1,5 +1,6 @@
 package com.probarnocuestanada.crossfitchess.chesslab01;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +28,18 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+Typeface faceTest1  = Typeface.createFromAsset(getAssets(),"fonts/JUNEBUG.TTF");
+Typeface faceChess2 = Typeface.createFromAsset(getAssets(),"fonts/LEIPFONT.TTF");
+
+TextView tv1=(TextView)findViewById(R.id.textChess01);
+tv1.setTypeface(faceTest1);
+
+TextView tv2=(TextView)findViewById(R.id.textChess02);
+tv2.setTypeface(faceChess2);
+
+
     }
 
     @Override

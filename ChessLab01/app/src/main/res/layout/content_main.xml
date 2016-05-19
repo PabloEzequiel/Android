@@ -14,21 +14,25 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
     <TextView
+        android:id="@+id/textChess01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1. Qg6 fxg6 2. Rxg7+ Kf8 3. Nxg6#" />
 
     <TextView
+        android:id="@+id/textChess02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1. Qd8+ Kxd8 2. Nc6+ Ke8 3. Rd8#" />
 
     <TextView
+        android:id="@+id/textChess03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1. Ne7+ Kh8 2. Rxh7+ Kxh7 3. Rh1#" />
