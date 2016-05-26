@@ -4,12 +4,23 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static String TAG = MainActivity.class.getName();
+
+    ImageView image;
+
+    int idx = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +37,13 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        image = (ImageView) findViewById(R.id.chess_board_image);
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -49,4 +66,88 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+    public void nextMateEn2(View view) {
+
+        Log.d(TAG, "NETX - nextMateEn2 " +  idx);
+
+        Log.d(TAG, "nextMateEn2 " + idx);
+
+        idx ++;
+
+        if (idx > 11) {
+            idx = 0;
+        }
+
+        if (idx == 0) {
+            image.setImageResource(R.drawable.chess_mate2_00000);
+        }
+
+        if (idx == 1) {
+            image.setImageResource(R.drawable.chess_mate2_00001);
+        }
+
+        if (idx == 2) {
+            image.setImageResource(R.drawable.chess_mate2_00002);
+        }
+
+        if (idx == 3) {
+            image.setImageResource(R.drawable.chess_mate2_00003);
+        }
+
+        if (idx == 4) {
+            image.setImageResource(R.drawable.chess_mate2_00004);
+        }
+
+        if (idx == 5) {
+            image.setImageResource(R.drawable.chess_mate2_00005);
+        }
+
+        if (idx == 6) {
+            image.setImageResource(R.drawable.chess_mate2_00006);
+        }
+
+        if (idx == 7) {
+            image.setImageResource(R.drawable.chess_mate2_00007);
+        }
+
+        if (idx == 8) {
+            image.setImageResource(R.drawable.chess_mate2_00008);
+        }
+
+        if (idx == 9) {
+            image.setImageResource(R.drawable.chess_mate2_00009);
+        }
+
+        if (idx == 10) {
+            image.setImageResource(R.drawable.chess_mate2_00010);
+        }
+
+        if (idx == 11) {
+            image.setImageResource(R.drawable.chess_mate2_00011);
+        }
+
+        // Toast.makeText(this, "Boton Click", Toast.LENGTH_SHORT);
+
+
+    }
+
+    public void nextMateEn1(View view) {
+        Log.d(TAG, "NETX - nextMateEn1 ");
+        Toast.makeText(this, "Boton Click nextMateEn1", Toast.LENGTH_SHORT);
+    }
+
+    public void nextMateEn3(View view) {
+        Log.d(TAG, "NETX - nextMateEn3 ");
+        Toast.makeText(this, "Boton Click nextMateEn3", Toast.LENGTH_SHORT);
+    }
+
+    public void nextMateEn4(View view) {
+        Log.d(TAG, "NETX - nextMateEn4 ");
+        Toast.makeText(this, "Boton Click nextMateEn4", Toast.LENGTH_SHORT);
+    }
+
+
 }

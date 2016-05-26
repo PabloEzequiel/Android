@@ -28,35 +28,50 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+
         <Button
+            android:id="@+id/boton_mateEn1"
             android:background="#cc00cc"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_margin="1dp"
-            android:text="#1"/>
+            android:text="#1"
+            android:onClick="nextMateEn1"
+            />
+
 
         <Button
+            android:id="@+id/boton_mateEn2"
             android:background="#cc00cc"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_margin="1dp"
-            android:text="#2"/>
+            android:text="#2"
+            android:onClick="nextMateEn2"
+            />
 
 
         <Button
+            android:id="@+id/boton_mateEn3"
             android:background="#cc00cc"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_margin="1dp"
-            android:text="#3"/>
+            android:text="#3"
+            android:onClick="nextMateEn3"
+            />
 
 
         <Button
+            android:id="@+id/boton_mateEn4"
             android:background="#cc00cc"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_margin="1dp"
-            android:text="#4"/>
+            android:text="#4"
+            android:onClick="nextMateEn4"
+            />
+
     </LinearLayout>
     
     
@@ -65,9 +80,11 @@
         android:src="@drawable/chess_mate2_00001"
         android:layout_width="280dp"
         android:layout_height="280dp"
-
         android:layout_margin="10dp"
-
         android:background="#00ff00"/>
+
+
+
+
 
 </LinearLayout>
