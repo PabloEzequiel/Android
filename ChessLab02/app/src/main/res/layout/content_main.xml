@@ -61,6 +61,8 @@
     
     
     <ImageView
+        android:id="@+id/chess_board_image"
+        android:src="@drawable/chess_mate2_00001"
         android:layout_width="280dp"
         android:layout_height="280dp"
 
