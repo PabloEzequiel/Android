@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-Typeface faceTest1  = Typeface.createFromAsset(getAssets(),"fonts/JUNEBUG.TTF");
-Typeface faceChess2 = Typeface.createFromAsset(getAssets(),"fonts/LEIPFONT.TTF");
+        Typeface faceTest1  = Typeface.createFromAsset(getAssets(),"fonts/JUNEBUG.TTF");
+        Typeface faceChess2 = Typeface.createFromAsset(getAssets(),"fonts/LEIPFONT.TTF");
 
-TextView tv1=(TextView)findViewById(R.id.textChess01);
-tv1.setTypeface(faceTest1);
+        TextView tv1=(TextView)findViewById(R.id.textChess01);
+        tv1.setTypeface(faceTest1);
 
-TextView tv2=(TextView)findViewById(R.id.textChess02);
-tv2.setTypeface(faceChess2);
+        TextView tv2=(TextView)findViewById(R.id.textChess02);
+        tv2.setTypeface(faceChess2);
 
 
     }
