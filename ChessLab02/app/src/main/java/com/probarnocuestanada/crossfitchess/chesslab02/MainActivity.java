@@ -69,13 +69,50 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+    public void firstMateEn2(View view) {
+
+        Log.d(TAG, "firstMateEn2" +  idx);
+
+        idx = 0;
+
+        navigateMateEn2(view);
+    }
+
+    public void lastMateEn2(View view) {
+
+        Log.d(TAG, "lastMateEn2" +  idx);
+
+        idx = 11;
+
+        navigateMateEn2(view);
+    }
+
+    public void prevMateEn2(View view) {
+
+        Log.d(TAG, "prevMateEn2" +  idx);
+
+        idx --;
+
+        navigateMateEn2(view);
+    }
+
     public void nextMateEn2(View view) {
 
-        Log.d(TAG, "NETX - nextMateEn2 " +  idx);
-
-        Log.d(TAG, "nextMateEn2 " + idx);
+        Log.d(TAG, "nextMateEn2" +  idx);
 
         idx ++;
+
+        navigateMateEn2(view);
+    }
+
+    private void navigateMateEn2(View view) {
+
+        Log.d(TAG, "NETX - navigateMateEn2 " +  idx);
+
+        if (idx < 0) {
+            idx = 0;
+        }
 
         if (idx > 11) {
             idx = 0;
