@@ -3,9 +3,11 @@ Proyectos Android
 
 Distintos Ejercicios de Android:
 
-- Laboratorio 01 (In Progres)
+- Laboratorio 01 (In Progress)
 - Ejercicio 01: (Cerrado)
 - Ejercicio 02: (Cerrado) En branch
+- ChessLab01 (In Progress)
+- ChessLab02 (In Progress)
 
 
 Estado:
@@ -21,6 +23,16 @@ Estado:
 - Ejercicio 02: Ejercicio Juguetería Master Detail, Fragments, con layouts para Celulares y Tablets
                 Desarrollado en:
                 http://javaen.blogspot.com.ar/2016/04/android-ejercicio-curso-2-jugueteria-en.html
+
+- ChessLab01:   Ejercicio Chess App manipulando fonts (Fonts de Ajedrez) 
+                Desarrollado en:
+                http://javaen.blogspot.com.ar/2016/04/android-chess-y-fonts-parte-ii.html
+                http://javaen.blogspot.com.ar/2016/04/android-y-chess-i.html
+
+- ChessLab02:   Ejercicio Chess App manipulando imagenes (Diagramas de Ajedrez) enfocado en Layouts
+                Desarrollado en:
+                http://javaen.blogspot.com.ar/2016/05/android-chess-y-layout.html
+
 
 
 
