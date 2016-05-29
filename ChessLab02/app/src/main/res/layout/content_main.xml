@@ -14,12 +14,13 @@
     tools:context="com.probarnocuestanada.crossfitchess.chesslab02.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="1dp"
         android:text="Dificultad de Ejercicios:" />
-
+   -->
 
     <LinearLayout
         android:padding="10dp"
@@ -74,7 +75,25 @@
 -->
 
     </LinearLayout>
-    
+
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:max="11" />
+
+
+    <TextView
+        android:id="@+id/seekBar1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:text="" />
+
     
     <ImageView
         android:id="@+id/chess_board_image"
@@ -146,8 +165,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="1dp"
         android:gravity="left"
-        android:text="1.♕g7+ ♞xg7 2. ♘h6# " />
+        android:text="" />
 
-
+<!--
+ android:text="1.♕g7+ ♞xg7 2. ♘h6# "
+ android:text="1.♕f6 ♛xf6 2. ♖xe8# "
+ android:text="1.♕xf7+ ♚xf7 2. ♗xe6# "
+ -->
 
 </LinearLayout>

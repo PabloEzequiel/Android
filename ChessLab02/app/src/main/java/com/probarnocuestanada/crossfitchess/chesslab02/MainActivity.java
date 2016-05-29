@@ -3,6 +3,7 @@ package com.probarnocuestanada.crossfitchess.chesslab02;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.Toolbar;
@@ -12,15 +13,28 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     public static String TAG = MainActivity.class.getName();
 
+
+    private static int MAX_MateEn1 = 13;
+    private static int MAX_MateEn2 = 11;
+    private static int MAX_MateEn3 = 15;
+    private static int MAX_MateEn4 = 12;
+
     ImageView image;
 
+    TextView chessSolution;
     int idx = 0;
+
+    private SeekBar seekBar;
+    private TextView  textView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +52,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        image     = (ImageView) findViewById(R.id.chess_board_image);
 
-        image = (ImageView) findViewById(R.id.chess_board_image);
+        seekBar   = (SeekBar)   findViewById(R.id.seekBar1);
+        textView  = (TextView)  findViewById(R.id.seekBar1_text);
+
+
+        // Initialize the textview with '0'.
+        textView.setText("Ejercicio: " + seekBar.getProgress() + "/" + seekBar.getMax());
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int progress = idx;
+
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // Toast.makeText(getApplicationContext(), "Started tracking SeekBar", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
+                progress = progresValue;
+
+                // Cambio el problema mientras se desliza la SeekBar
+                textView.setText("Ejercicio: " + progress + "/" + seekBar.getMax());
+                idx = progresValue;
+                navigateMateEn2();
+            }
+
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+                // Cambio el problema cuando se suelta la seekBar
+                textView.setText("Ejercicio: " + progress + "/" + seekBar.getMax());
+                idx = progress;
+                navigateMateEn2();
+            }
+        });
 
 
     }
@@ -68,6 +118,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void showSolution(View view) {
+        Log.d(TAG, "showSolution" +  idx);
+
+        chessSolution.setText("1.♕g7+ ♞xg7 2. ♘h6# ");
+    }
 
 
     public void firstMateEn2(View view) {
@@ -76,16 +131,16 @@ public class MainActivity extends AppCompatActivity {
 
         idx = 0;
 
-        navigateMateEn2(view);
+        navigateMateEn2();
     }
 
     public void lastMateEn2(View view) {
 
         Log.d(TAG, "lastMateEn2" +  idx);
 
-        idx = 11;
+        idx = MAX_MateEn2;
 
-        navigateMateEn2(view);
+        navigateMateEn2();
     }
 
     public void prevMateEn2(View view) {
@@ -94,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
         idx --;
 
-        navigateMateEn2(view);
+        navigateMateEn2();
     }
 
     public void nextMateEn2(View view) {
@@ -103,10 +158,10 @@ public class MainActivity extends AppCompatActivity {
 
         idx ++;
 
-        navigateMateEn2(view);
+        navigateMateEn2();
     }
 
-    private void navigateMateEn2(View view) {
+    private void navigateMateEn2() {
 
         Log.d(TAG, "NETX - navigateMateEn2 " +  idx);
 
@@ -114,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             idx = 0;
         }
 
-        if (idx > 11) {
+        if (idx > MAX_MateEn2) {
             idx = 0;
         }
 
