@@ -23,6 +23,14 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+/**
+ * Created by Pablo Ezequiel on 16/5/16.
+ * <p>
+ * ProbarNoCuestaNada.com
+ * <p>
+ * https://github.com/PabloEzequiel
+ * https://javaen.blogspot.com
+ */
 public class MainActivity extends AppCompatActivity {
 
     public static String TAG = MainActivity.class.getName();
