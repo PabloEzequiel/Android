@@ -1,5 +1,7 @@
 package com.probarnocuestanada.crossfitchess.chesslab02;
 
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +19,10 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 public class MainActivity extends AppCompatActivity {
 
     public static String TAG = MainActivity.class.getName();
@@ -33,7 +39,12 @@ public class MainActivity extends AppCompatActivity {
     int idx = 0;
 
     private SeekBar seekBar;
-    private TextView  textView;
+    private TextView textView;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
 
     @Override
@@ -47,19 +58,23 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "javaen.blogspot.com", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
 
-        image     = (ImageView) findViewById(R.id.chess_board_image);
+        image = (ImageView) findViewById(R.id.chess_board_image);
 
-        seekBar   = (SeekBar)   findViewById(R.id.seekBar1);
-        textView  = (TextView)  findViewById(R.id.seekBar1_text);
+        seekBar = (SeekBar) findViewById(R.id.seekBar1);
+        textView = (TextView) findViewById(R.id.seekBar1_text);
 
 
         // Initialize the textview with '0'.
         textView.setText("Ejercicio: " + seekBar.getProgress() + "/" + seekBar.getMax());
+
+        Drawable thumb = getResources().getDrawable(R.drawable.seekbar_peon_24);
+        seekBar.setThumb(thumb);
+
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress = idx;
@@ -92,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
 
@@ -119,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void showSolution(View view) {
-        Log.d(TAG, "showSolution" +  idx);
+        Log.d(TAG, "showSolution" + idx);
 
         chessSolution.setText("1.♕g7+ ♞xg7 2. ♘h6# ");
     }
@@ -127,43 +145,43 @@ public class MainActivity extends AppCompatActivity {
 
     public void firstMateEn2(View view) {
 
-        Log.d(TAG, "firstMateEn2" +  idx);
+        Log.d(TAG, "firstMateEn2" + idx);
 
         idx = 0;
-
+        seekBar.setProgress(idx);
         navigateMateEn2();
     }
 
     public void lastMateEn2(View view) {
 
-        Log.d(TAG, "lastMateEn2" +  idx);
+        Log.d(TAG, "lastMateEn2" + idx);
 
         idx = MAX_MateEn2;
-
+        seekBar.setProgress(idx);
         navigateMateEn2();
     }
 
     public void prevMateEn2(View view) {
 
-        Log.d(TAG, "prevMateEn2" +  idx);
+        Log.d(TAG, "prevMateEn2" + idx);
 
-        idx --;
-
+        idx--;
+        seekBar.setProgress(idx);
         navigateMateEn2();
     }
 
     public void nextMateEn2(View view) {
 
-        Log.d(TAG, "nextMateEn2" +  idx);
+        Log.d(TAG, "nextMateEn2" + idx);
 
-        idx ++;
-
+        idx++;
+        seekBar.setProgress(idx);
         navigateMateEn2();
     }
 
     private void navigateMateEn2() {
 
-        Log.d(TAG, "NETX - navigateMateEn2 " +  idx);
+        Log.d(TAG, "NETX - navigateMateEn2 " + idx);
 
         if (idx < 0) {
             idx = 0;
@@ -242,4 +260,43 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app URL is correct.
+                Uri.parse("android-app://com.probarnocuestanada.crossfitchess.chesslab02/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app URL is correct.
+                Uri.parse("android-app://com.probarnocuestanada.crossfitchess.chesslab02/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        client.disconnect();
+    }
 }
