@@ -8,6 +8,7 @@ Distintos Ejercicios de Android:
 - Ejercicio 02: (Cerrado) En branch
 - ChessLab01 (In Progress)
 - ChessLab02 (In Progress)
+- ChessLab03 (In Progress)
 
 
 Estado:
@@ -32,6 +33,11 @@ Estado:
 - ChessLab02:   Ejercicio Chess App manipulando imagenes (Diagramas de Ajedrez) enfocado en Layouts
                 Desarrollado en:
                 http://javaen.blogspot.com.ar/2016/05/android-chess-y-layout.html
+
+- ChessLab03:   Ejercicio Chess App enfocado en la creación de menú y Drawables
+                Desarrollado en:
+                http://javaen.blogspot.com.ar/2016/04/chess-y-menu-parte-ii-parte-android.html
+
 
 
 

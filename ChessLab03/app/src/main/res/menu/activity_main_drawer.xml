@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mate1"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mates en #1" />
+        <item
+            android:id="@+id/nav_mate2"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mates en #2" />
+        <item
+            android:id="@+id/nav_mate3"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mates en #3" />
+        <item
+            android:id="@+id/nav_mate4"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mates en #4" />
+    </group>
+
+    <!--
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+    -->
+
+</menu>
