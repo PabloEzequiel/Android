@@ -33,6 +33,11 @@ Estado:
                 Desarrollado en:
                 http://javaen.blogspot.com.ar/2016/05/android-chess-y-layout.html
 
+- ChessLab03:   Ejercicio Chess App enfocado en la creación de menú y Drawables
+                Desarrollado en:
+                http://javaen.blogspot.com.ar/2016/04/chess-y-menu-parte-ii-parte-android.html
+
+
 
 
 
