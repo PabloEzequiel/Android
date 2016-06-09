@@ -3,6 +3,7 @@ package com.probarnocuestanada.chess.chesslab03;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +13,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static String TAG = MainActivity.class.getName();
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +50,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        doInicialize();
     }
 
     @Override
@@ -81,12 +94,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_mate1) {
+            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_1_COLLECTION);
             // Handle the camera action
         } else if (id == R.id.nav_mate2) {
+            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_2_COLLECTION);
 
         } else if (id == R.id.nav_mate3) {
+            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_3_COLLECTION);
 
         } else if (id == R.id.nav_mate4) {
+            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_4_COLLECTION);
 
       //  } else if (id == R.id.nav_share) {
 
@@ -98,4 +115,37 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-}
+
+
+    private void doInicialize() {
+
+        Log.d(TAG, "doInicialize");
+
+        MainContentSingleton instance = MainContentSingleton.getInstance();
+
+        instance.doInit(this);
+
+    }
+
+    /*
+    * Eventos Onclick
+    * */
+    public void firstProblem(View view) {
+
+        MainContentSingleton.getInstance().firstProblem();
+    }
+
+    public void prevProblem(View view) {
+
+        MainContentSingleton.getInstance().prevProblem();
+    }
+
+    public void nextProblem(View view) {
+
+        MainContentSingleton.getInstance().nextProblem();
+    }
+
+    public void lastProblem(View view) {
+
+        MainContentSingleton.getInstance().lastProblem();
+    }}
