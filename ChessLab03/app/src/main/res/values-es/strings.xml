@@ -1,0 +1,41 @@
+<!--
+Coordenadas de Madrid en grados decimales (agregar buenos aires, mexico, latam. etc)
+
+Latitud: 40.4165000
+Longitud: -3.7025600
+ -->
+<resources>
+    <string name="app_name">Chess Lab!</string>
+
+    <!-- Menu -->
+    <string name="menu_mate_en_1">Jaque Mate en #1</string>
+    <string name="menu_mate_en_2">Jaque Mate en #2</string>
+    <string name="menu_mate_en_3">Jaque Mate en #3</string>
+    <string name="menu_mate_en_4">Jaque Mate en #4</string>
+
+    <string name="navigation_drawer_open">Abrir la barra de navegación</string>
+    <string name="navigation_drawer_close">Cerrar la barra de navegación</string>
+
+    <string name="action_settings">Preferencias</string>
+    <string name="action_about">Acerca de</string>
+
+
+    <!-- Settings -->
+    <string name="pref_language_setting">Idioma</string>
+    <string name="pref_language_titulo">Selecione un idioma</string>
+    <string name="pref_list_idiomas_summary">Idioma de la aplicación</string>
+
+    <string name="title_activity_display_message">Acerca de</string>
+
+
+    <!-- Links -->
+    <string name="txtCredits"><a href="http://javaen.blogspot.com">Javaen.blogspot.com</a></string>
+
+    <!-- Txt -->
+    <string name="txt_finish">Finalizado</string>
+    <string name="txt_about">Encuentra en cada diagrama, la combinación que define la partida.</string>
+    <string name="txt_about_tal">\'Si prohibiesen el Ajedrez, probablemente me haría contrabandista.\' (Mikhail Tahl)</string>
+
+
+
+</resources>

@@ -1,0 +1,41 @@
+<!--
+Coordenadas de Berlín en grados decimales
+
+Latitud: 52.5243700
+Longitud: 13.4105300
+ -->
+<resources>
+    <string name="app_name">Chess Lab!</string>
+
+    <!-- Menu -->
+    <string name="menu_mate_en_1">Checkmate in #1</string>
+    <string name="menu_mate_en_2">Checkmate in #2</string>
+    <string name="menu_mate_en_3">Checkmate in #3</string>
+    <string name="menu_mate_en_4">Checkmate in #4</string>
+
+    <string name="navigation_drawer_open">Öffnen Sie die Navigationsleiste</string>
+    <string name="navigation_drawer_close">Schließen Sie die Navigationsleiste</string>
+
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_about">über</string>
+
+
+    <!-- Settings -->
+    <string name="pref_language_setting">Sprache</string>
+    <string name="pref_language_titulo">Wählen Sie eine Sprache</string>
+    <string name="pref_list_idiomas_summary">Anwendungssprache</string>
+
+    <string name="title_activity_display_message">über</string>
+
+
+    <!-- Links -->
+    <string name="txtCredits"><a href="http://javaen.blogspot.com">Javaen.blogspot.com</a></string>
+
+    <!-- Txt -->
+    <string name="txt_finish">Abgeschlossen</string>
+    <string name="txt_about">Finden Sie in jedem Diagramm die Kombination, die das Spiel definiert.</string>
+    <string name="txt_about_tal">\'Wenn Schach prohibiesen , wahrscheinlich würde ich Schmuggler.\' (Mikhail Tahl)</string>
+
+
+
+</resources>

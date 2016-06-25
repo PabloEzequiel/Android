@@ -1,8 +1,53 @@
+<!--
+Coordenadas de Londres en grados decimales (agregar EEUU, Australia)
+
+Latitud: 51.5085300
+Longitud: -0.1257400
+
+The language is defined by a two-letter ISO 639-1 language code,
+optionally followed by a two letter ISO 3166-1-alpha-2 region code (preceded by lowercase "r").
+https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
+
+              Language Name | Native Name
+ Castellano   (Spanish)       (Español)
+ Inglés,      (English)       (English)
+ Francés                      (français, langue française)
+              German           Deutsch
+              Portuguese       português
+              Italian          Italiano
+
+-->
 <resources>
-    <string name="app_name">ChessLab03-b</string>
+    <string name="app_name">Chess Lab!</string>
+
+    <!-- Menu -->
+    <string name="menu_mate_en_1">Checkmate at #1</string>
+    <string name="menu_mate_en_2">Checkmate at #2</string>
+    <string name="menu_mate_en_3">Checkmate at #3</string>
+    <string name="menu_mate_en_4">Checkmate at #4</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+
+
+    <!-- Settings -->
+    <string name="pref_language_setting">Language</string>
+    <string name="pref_language_titulo">Select Language</string>
+    <string name="pref_list_idiomas_summary">Application Language</string>
+
+    <string name="title_activity_display_message">About</string>
+
+
+    <!-- Links -->
+    <string name="txtCredits"><a href="http://javaen.blogspot.com">Javaen.blogspot.com</a></string>
+
+    <!-- Txt -->
+    <string name="txt_finish">finished</string>
+    <string name="txt_about">Find in each diagram, the combination to win the game.</string>
+    <string name="txt_about_tal">\'If Chess was forbidden, I probably would smuggler.\' (Mikhail Tahl)</string>
+
+
 </resources>
