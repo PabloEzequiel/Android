@@ -5,19 +5,19 @@
         <item
             android:id="@+id/nav_mate1"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Mates en #1" />
+            android:title="@string/menu_mate_en_1" />
         <item
             android:id="@+id/nav_mate2"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Mates en #2" />
+            android:title="@string/menu_mate_en_2" />
         <item
             android:id="@+id/nav_mate3"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Mates en #3" />
+            android:title="@string/menu_mate_en_3" />
         <item
             android:id="@+id/nav_mate4"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Mates en #4" />
+            android:title="@string/menu_mate_en_4" />
     </group>
 
     <!--

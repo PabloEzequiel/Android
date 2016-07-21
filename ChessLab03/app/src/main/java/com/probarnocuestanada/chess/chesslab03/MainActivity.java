@@ -1,8 +1,9 @@
 package com.probarnocuestanada.chess.chesslab03;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -13,16 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.SeekBar;
-import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public static String TAG = MainActivity.class.getName();
+    public static String TAG = MainActivity.class.getSimpleName();
 
-
+    private static final int RESULT_SETTINGS = 1;
 
 
 
@@ -33,14 +32,15 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                superNextProblem(view);
             }
         });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,7 +52,28 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        doInicialize();
+    }
+
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+
+        Log.d(TAG, "onResume");
+
+        MainContentSingleton.getInstance().doState_recover(this);
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+
+        Log.d(TAG, "onPause");
+
+        MainContentSingleton.getInstance().doState_persist(this);
+
     }
 
     @Override
@@ -81,8 +102,21 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Intent intent = new Intent(this, UserSettingsActivity.class);
+            startActivityForResult(intent, RESULT_SETTINGS);
+
             return true;
         }
+
+        if (id == R.id.action_about) {
+
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivityForResult(intent, RESULT_SETTINGS);
+
+            return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -94,16 +128,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_mate1) {
-            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_1_COLLECTION);
+            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_1_COLLECTION, 0);
             // Handle the camera action
         } else if (id == R.id.nav_mate2) {
-            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_2_COLLECTION);
+            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_2_COLLECTION, 0);
 
         } else if (id == R.id.nav_mate3) {
-            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_3_COLLECTION);
+            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_3_COLLECTION, 0);
 
         } else if (id == R.id.nav_mate4) {
-            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_4_COLLECTION);
+            MainContentSingleton.getInstance().doInit(this, MainContentSingleton.KEY_MATE_4_COLLECTION, 0);
 
       //  } else if (id == R.id.nav_share) {
 
@@ -117,15 +151,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    private void doInicialize() {
 
-        Log.d(TAG, "doInicialize");
-
-        MainContentSingleton instance = MainContentSingleton.getInstance();
-
-        instance.doInit(this);
-
-    }
 
     /*
     * Eventos Onclick
@@ -148,4 +174,17 @@ public class MainActivity extends AppCompatActivity
     public void lastProblem(View view) {
 
         MainContentSingleton.getInstance().lastProblem();
-    }}
+    }
+
+
+    /**
+     * Boton de Next: La idea es que pase de nivel cuando se agota
+     */
+    public void superNextProblem(View view) {
+        MainContentSingleton.getInstance().superNextProblem();
+    }
+
+
+}
+
+

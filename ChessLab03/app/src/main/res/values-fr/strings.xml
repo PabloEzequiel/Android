@@ -5,7 +5,7 @@ Latitud: 48.8534100
 Longitud: 2.3488000
  -->
 <resources>
-    <string name="app_name">Chess Lab!</string>
+    <string name="app_name">Chess Lab</string>
 
     <!-- Menu -->
     <string name="menu_mate_en_1">Checkmate à #1</string>
@@ -28,11 +28,11 @@ Longitud: 2.3488000
     <string name="title_activity_display_message">À propos de</string>
 
     <!-- Links -->
-    <string name="txtCredits"><a href="http://javaen.blogspot.com">Javaen.blogspot.com</a></string>
 
     <!-- Txt -->
     <string name="txt_finish">Finalisé</string>
     <string name="txt_about">Dans chaque diagramme, la combinaison pour gagner le match.</string>
     <string name="txt_about_tal">\'Si prohibiesen Chess, je serais probablement Smuggler.\' (Mikhail Tahl)</string>
+    <string name="txtCredits"><a href="https://pabloezequiel.github.io/chess">pabloezequiel.github.io/chess</a></string>
 
 </resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="24dp"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:layout_marginBottom="24dp"
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/typography_title"
+        android:layout_marginTop="@dimen/typography_mtop_headline"
+        android:text="@string/app_name"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/typography_body"
+        android:layout_marginTop="@dimen/typography_mtop_body"
+        android:text="@string/txt_about"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:textSize="@dimen/typography_caption"
+        android:text="@string/txt_about_tal"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/typography_body"
+        android:layout_marginTop="@dimen/typography_mtop_body"
+        android:text="Versión: 1.0.1"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/typography_body"
+        android:layout_marginTop="@dimen/typography_mtop_body"
+        android:text="Author: Pablo Ezequiel"/>
+
+
+
+    <!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/typography_body"
+        android:layout_marginTop="@dimen/typography_mtop_body"
+        android:text="javaen.blogspot.com"/>
+    -->
+
+
+    <TextView
+        android:id="@+id/txtCredits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/typography_body"
+        android:layout_marginTop="@dimen/typography_mtop_body"
+        android:autoLink="web"
+        android:text="@string/txtCredits"/>
+
+
+
+</LinearLayout>

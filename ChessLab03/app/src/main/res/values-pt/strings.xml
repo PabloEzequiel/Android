@@ -5,7 +5,7 @@ Latitud: 38.7166700
 Longitud: -9.1333300
 -->
 <resources>
-    <string name="app_name">Chess Lab!</string>
+    <string name="app_name">Chess Lab</string>
 
     <!-- Menu -->
     <string name="menu_mate_en_1">Checkmate em #1</string>
@@ -29,7 +29,7 @@ Longitud: -9.1333300
 
 
     <!-- Links -->
-    <string name="txtCredits"><a href="http://javaen.blogspot.com">Javaen.blogspot.com</a></string>
+    <string name="txtCredits"><a href="https://pabloezequiel.github.io/chess">pabloezequiel.github.io/chess</a></string>
 
     <!-- Txt -->
     <string name="txt_finish">Finalizados</string>

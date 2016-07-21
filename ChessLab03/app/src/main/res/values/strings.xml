@@ -18,7 +18,7 @@ https://developer.android.com/guide/topics/resources/providing-resources.html#Al
 
 -->
 <resources>
-    <string name="app_name">Chess Lab!</string>
+    <string name="app_name">Chess Lab</string>
 
     <!-- Menu -->
     <string name="menu_mate_en_1">Checkmate at #1</string>
@@ -42,7 +42,7 @@ https://developer.android.com/guide/topics/resources/providing-resources.html#Al
 
 
     <!-- Links -->
-    <string name="txtCredits"><a href="http://javaen.blogspot.com">Javaen.blogspot.com</a></string>
+    <string name="txtCredits"><a href="https://pabloezequiel.github.io/chess">pabloezequiel.github.io/chess</a></string>
 
     <!-- Txt -->
     <string name="txt_finish">finished</string>

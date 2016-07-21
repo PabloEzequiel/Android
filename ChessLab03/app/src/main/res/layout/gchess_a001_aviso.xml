@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="168dp"
+    android:background="@color/color_50">
+
+
+    <!--
+     Diseño:
+     https://material.google.com/components/tabs.html#tabs-usage
+     https://material.google.com/components/dialogs.html#dialogs-specs
+
+     OK:
+     https://material.google.com/components/grid-lists.html#grid-lists-specs
+     seguimos:
+     http://www.hermosaprogramacion.com/2015/07/tutorial-para-crear-un-gridview-en-android/
+    -->
+
+
+
+    <ImageView
+        android:id="@+id/gchess_a001_img"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="@color/color_100"
+        android:layout_margin="12dp"
+        android:layout_gravity="top|center"
+        android:src="@drawable/pieza06_peon"
+        />
+
+    <LinearLayout
+        android:id="@+id/gchess_a001_txt_layout"
+        android:background="@color/color_900"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal|bottom">
+
+            <TextView
+                android:id="@+id/gchess_a001_txt"
+                android:textColor="@color/colorPrimaryLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:paddingLeft="16dp"
+                android:layout_gravity="center_vertical"
+                android:text="Mates en #1"
+                />
+
+    </LinearLayout>
+
+
+</FrameLayout>

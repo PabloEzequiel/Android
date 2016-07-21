@@ -1,4 +1,4 @@
-package com.probarnocuestanada.chess.chesslab03;
+package com.probarnocuestanada.chess.chesslab03.core;
 
 import android.content.Context;
 import android.graphics.Bitmap;
