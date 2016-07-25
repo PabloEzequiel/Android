@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Utiliza el "Native Name" segun wikipedia ISO 639-1-->
+    <string-array name="listIdiomas">
+        <item name="1">Castellano</item>
+        <item name="2">English</item>
+        <item name="3">Deutsch</item>
+        <item name="4">Français</item>
+        <item name="5">Italiano</item>
+        <item name="6">Português</item>
+    </string-array>
+
+    <string-array name="listIdiomasValues">
+        <item name="1">es</item>
+        <item name="2">en</item>
+        <item name="3">de</item>
+        <item name="4">fr</item>
+        <item name="5">it</item>
+        <item name="6">pt</item>
+    </string-array>
+
+</resources>

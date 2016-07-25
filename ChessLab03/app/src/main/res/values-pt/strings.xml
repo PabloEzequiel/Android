@@ -1,0 +1,39 @@
+<!--
+Coordenadas de Lisboa en grados decimales (agregar brasil)
+
+Latitud: 38.7166700
+Longitud: -9.1333300
+-->
+<resources>
+    <string name="app_name">Chess Lab</string>
+
+    <!-- Menu -->
+    <string name="menu_mate_en_1">Checkmate em #1</string>
+    <string name="menu_mate_en_2">Checkmate em #2</string>
+    <string name="menu_mate_en_3">Checkmate em #3</string>
+    <string name="menu_mate_en_4">Checkmate em #4</string>
+
+    <string name="navigation_drawer_open">Abra a barra de navegação</string>
+    <string name="navigation_drawer_close">Feche a barra de navegação</string>
+
+    <string name="action_settings">Preferências</string>
+    <string name="action_about">Sobre</string>
+
+
+    <!-- Settings -->
+    <string name="pref_language_setting">Idioma</string>
+    <string name="pref_language_titulo">Selecione o idioma</string>
+    <string name="pref_list_idiomas_summary">Idioma do aplicativo</string>
+
+    <string name="title_activity_display_message">Sobre</string>
+
+
+    <!-- Links -->
+    <string name="txtCredits"><a href="https://pabloezequiel.github.io/chess">pabloezequiel.github.io/chess</a></string>
+
+    <!-- Txt -->
+    <string name="txt_finish">Finalizados</string>
+    <string name="txt_about">Encontre em cada diagrama, a combinação para ganhar o jogo.</string>
+    <string name="txt_about_tal">\'Se prohibiesen Xadrez, eu provavelmente Smuggler.\' (Mikhail Tahl)</string>
+
+</resources>

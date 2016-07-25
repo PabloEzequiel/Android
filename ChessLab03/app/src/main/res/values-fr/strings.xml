@@ -1,0 +1,38 @@
+<!--
+Coordenadas de París en grados decimales
+
+Latitud: 48.8534100
+Longitud: 2.3488000
+ -->
+<resources>
+    <string name="app_name">Chess Lab</string>
+
+    <!-- Menu -->
+    <string name="menu_mate_en_1">Checkmate à #1</string>
+    <string name="menu_mate_en_2">Checkmate à #2</string>
+    <string name="menu_mate_en_3">Checkmate à #3</string>
+    <string name="menu_mate_en_4">Checkmate à #4</string>
+
+    <string name="navigation_drawer_open">Ouvrez la barre de navigation</string>
+    <string name="navigation_drawer_close">Fermez la barre de navigation</string>
+
+    <string name="action_settings">Paramètres</string>
+    <string name="action_about">À propos de</string>
+
+
+    <!-- Settings -->
+    <string name="pref_language_setting">Langue</string>
+    <string name="pref_language_titulo">Sélectionnez la langue</string>
+    <string name="pref_list_idiomas_summary">Application Language</string>
+
+    <string name="title_activity_display_message">À propos de</string>
+
+    <!-- Links -->
+
+    <!-- Txt -->
+    <string name="txt_finish">Finalisé</string>
+    <string name="txt_about">Dans chaque diagramme, la combinaison pour gagner le match.</string>
+    <string name="txt_about_tal">\'Si prohibiesen Chess, je serais probablement Smuggler.\' (Mikhail Tahl)</string>
+    <string name="txtCredits"><a href="https://pabloezequiel.github.io/chess">pabloezequiel.github.io/chess</a></string>
+
+</resources>

@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--
+        https://material.google.com/style/color.html#color-color-palette
+
+        Dark text (#000000)                   Opacity   100%   FF   255   (1.00 * 255 = 255 == FF)
+        Primary text                           87%                        (0.87 * 255 = 222 == DE)
+        Secondary text                         54%                        (0.54 * 255 = 138 == 8A)
+        Disabled text, hint text, and icons    38%                        (0.38 * 255 =  97 == 61)
+        Dividers                               12%                        (0.12 * 255 =  31 == 1F)
+
+        Light text (#FFFFFF)                  Opacity
+        Primary text                          100%                        (1.00 * 255 = 255 == FF)
+        Secondary text                         70%                        (0.70 * 255 = 179 == B3)
+        Disabled text, hint text, and icons    50%                        (0.50 * 255 = 128 == 80)
+        Dividers                               12%                        (0.12 * 255 =  31 == 1F)
+    -->
+
+    <!--
+         Indigo (Principal) + Pink (Secundario):
+         http://www.materialpalette.com/indigo/pink
+     -->
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimaryLight">#C5CAE9</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+
+    <!-- opacity primary dark -->
+    <color name="colorPrimaryDark_op87">#DE303F9F</color>
+    <color name="colorPrimaryDark_op54">#8A303F9F</color>
+    <color name="colorPrimaryDark_op38">#61303F9F</color>
+    <color name="colorPrimaryDark_op12">#1F303F9F</color>
+
+    <!-- opacity primary light -->
+    <color name="colorPrimaryLight_op70">#B3C5CAE9</color>
+    <color name="colorPrimaryLight_op50">#80C5CAE9</color>
+    <color name="colorPrimaryLight_op12">#1FC5CAE9</color>
+
+
+    <color name="icons">#FFFFFF</color>     <!-- -->
+    <color name="divider">#B6B6B6</color>
+
+
+    <!-- Indiog -->
+    <color name="color_50" >#E8EAF6</color>
+    <color name="color_100">#C5CAE9</color>
+    <color name="color_200">#9FA8DA</color>
+    <color name="color_300">#7986CB</color>
+    <color name="color_400">#5C6BC0</color>
+    <color name="color_500">#3F51B5</color>
+    <color name="color_600">#3949AB</color>
+    <color name="color_700">#303F9F</color>
+    <color name="color_800">#283593</color>
+    <color name="color_900">#1A237E</color>
+
+
+    <!-- Green -->
+    <color name="green_color_50" >#E8F5E9</color>
+    <color name="green_color_100">#C8E6C9</color>
+    <color name="green_color_200">#A5D6A7</color>
+    <color name="green_color_300">#81C784</color>
+    <color name="green_color_400">#66BB6A</color>
+    <color name="green_color_500">#4CAF50</color>
+    <color name="green_color_600">#43A047</color>
+    <color name="green_color_700">#388E3C</color>
+    <color name="green_color_800">#2E7D32</color>
+    <color name="green_color_900">#1B5E20</color>
+
+
 </resources>

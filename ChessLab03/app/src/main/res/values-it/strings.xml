@@ -1,0 +1,39 @@
+<!--
+Coordenadas de Roma en grados decimales
+
+Latitud: 41.8919300
+Longitud: 12.5113300
+-->
+<resources>
+    <string name="app_name">Chess Lab</string>
+
+    <!-- Menu -->
+    <string name="menu_mate_en_1">Scacco matto al #1</string>
+    <string name="menu_mate_en_2">Scacco matto al #2</string>
+    <string name="menu_mate_en_3">Scacco matto al #3</string>
+    <string name="menu_mate_en_4">Scacco matto al #4</string>
+
+    <string name="navigation_drawer_open">Cassetto navigazione Aperto</string>
+    <string name="navigation_drawer_close">Chiudere il cassetto di navigazione</string>
+
+    <string name="action_settings">Impostazioni</string>
+    <string name="action_about">Informazioni</string>
+
+
+    <!-- Settings -->
+    <string name="pref_language_setting">lingua</string>
+    <string name="pref_language_titulo">Scegli la lingua</string>
+    <string name="pref_list_idiomas_summary">Lingua dell applicazione</string>
+
+    <string name="title_activity_display_message">Informazioni</string>
+
+
+    <!-- Links -->
+    <string name="txtCredits"><a href="https://pabloezequiel.github.io/chess">pabloezequiel.github.io/chess</a></string>
+
+    <!-- Txt -->
+    <string name="txt_finish">Finalizzato</string>
+    <string name="txt_about">Trovare in ogni schema, la combinazione per vincere la partita.</string>
+    <string name="txt_about_tal">\'Se prohibiesen scacchi, probabilmente avrei Smuggler.\' (Mikhail Tahl)</string>
+
+</resources>
