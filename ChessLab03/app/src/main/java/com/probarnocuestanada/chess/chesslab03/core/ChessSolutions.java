@@ -107,11 +107,11 @@ public class ChessSolutions {
         chessProblems_utf8.put("chess_mate4_00004","1. ♘g6+ ♚h7 2. ♘f8+ ♚h8 3. ♕h7+ ♜xh7 4. ♘g6#        ");
         chessProblems_utf8.put("chess_mate4_00005","1. ♖xh7+ ♚xh7 2. ♘f8+ ♚g7 3. ♕h7+ ♚xf8 4. ♕f7#      ");
         chessProblems_utf8.put("chess_mate4_00006","1. ♖h7+ ♚xh7 2. ♕e7+ ♜f7 3. ♕xf7+ ♚h6 4. ♕g7#       ");
-        chessProblems_utf8.put("chess_mate4_00007","1. ♖xc5+ ♚b6 2. ♕c7+ ♚a7 3. ♖xa5+ Qa6 4. ♗d4#       ");
+        chessProblems_utf8.put("chess_mate4_00007","1. ♖xc5+ ♚b6 2. ♕c7+ ♚a7 3. ♖xa5+ ♛a6 4. ♗d4#       ");
         chessProblems_utf8.put("chess_mate4_00008","1. ♗h5+ ♞g6 2. ♖xh7 ♜g1+ 3. ♔xg1 ♝xe2 4. ♗xg6#      ");
         chessProblems_utf8.put("chess_mate4_00009","1. ♖f8+ ♞xf8 2. ♕xf8+ ♚e5 3. f4+ ♝xf4 4. gxf4#      ");
-        chessProblems_utf8.put("chess_mate4_00010","1. ♘e7+ ♚h8 2. ♘xg6+ Qxg6 3. ♕xf8+ Qg8 4. ♕xg8#     ");
-        chessProblems_utf8.put("chess_mate4_00011","1. ♗xh7+ ♚h8 2. ♗g8+ Qh6 3. ♖xh6+ ♝xh6 4. ♕h7#      ");
+        chessProblems_utf8.put("chess_mate4_00010","1. ♘e7+ ♚h8 2. ♘xg6+ ♛xg6 3. ♕xf8+ ♛g8 4. ♕xg8#     ");
+        chessProblems_utf8.put("chess_mate4_00011","1. ♗xh7+ ♚h8 2. ♗g8+ ♛h6 3. ♖xh6+ ♝xh6 4. ♕h7#      ");
         chessProblems_utf8.put("chess_mate4_00012","1. ♗f8+ ♜xf8 2. ♖d3 ♝e1 3. ♖h3+ ♝h4 4. ♖xh4#        ");
         chessProblems_utf8.put("chess_mate4_00013","1. ♘g5 ♝xf2+ 2. ♔h1 ♜xa8 3. ♕h7+ ♚f8 4. ♕h8#        ");
         chessProblems_utf8.put("chess_mate4_00014","1. ♖xb8+ ♚a7 2. ♕d4+ ♚xb8 3. ♖e8+ ♚c7 4. ♕d8#       ");
