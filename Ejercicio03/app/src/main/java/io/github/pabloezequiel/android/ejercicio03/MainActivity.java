@@ -1,8 +1,11 @@
 package io.github.pabloezequiel.android.ejercicio03;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +18,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,15 +87,33 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+
+            Log.d(TAG, "Opcion 01: Camera");
+
+            invokeMiActivity(this);
+
+
         } else if (id == R.id.nav_gallery) {
+
+            Log.d(TAG, "Opcion 02: Gallery");
+
+            invokeMiActivity_V2(this);
 
         } else if (id == R.id.nav_slideshow) {
 
+            Log.d(TAG, "Opcion 03: Slide Show");
+
         } else if (id == R.id.nav_manage) {
+
+            Log.d(TAG, "Opcion 04: Nav Manage");
 
         } else if (id == R.id.nav_share) {
 
+            Log.d(TAG, "Opcion 05: Share");
+
         } else if (id == R.id.nav_send) {
+
+            Log.d(TAG, "Opcion 06: Send");
 
         }
 
@@ -98,4 +121,33 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
+    /**
+     * No se para que se utiliza esto de las acciones ..
+     * @param activity
+     */
+    public static void invokeMiActivity(Activity activity){
+        String actionName= "seccion.01.accion.nombreAccion";
+        Intent intent = new Intent(actionName);
+        activity.startActivity(intent);
+    }
+
+    // I am following samples from:
+
+    // http://www.vogella.com/tutorials/AndroidIntent/article.html#starting-other-android-components-via-intents
+    /**
+     *
+     */
+    public static void invokeMiActivity_V2(Activity activity){
+
+
+        Intent i = new Intent(activity, Seccion_01_Activity.class);
+        activity.startActivity(i);
+
+    }
+
+
+
 }

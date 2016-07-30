@@ -16,14 +16,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Ejercicio 03" />
+        android:text="Hello Seccion 01" />
 
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Navigation, Intents and Activites" />
+        android:text="Navigation, Seccion 01" />
 
 
 </LinearLayout>
