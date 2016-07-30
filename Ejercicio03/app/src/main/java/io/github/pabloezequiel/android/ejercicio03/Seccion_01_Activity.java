@@ -25,10 +25,36 @@ public class Seccion_01_Activity extends Activity {
 
         Log.d(TAG, "Seccion_01_Activity.onCreate()");
 
+
+
         //Este código se inserta en el método onCreate() de la actividad.
         Intent intent = this.getIntent();
         if (intent == null){
             Log.d(TAG, "La actividad no se ha llamado mediante un intent.");
+        } else {
+
+            Log.d(TAG, "La actividad SI se ha llamado mediante un intent.");
+
+            //Obtener un bundle
+            Bundle b = intent.getExtras();
+
+            try{
+
+                boolean bValue1 = b.getBoolean("param_boolean_value");
+                boolean bValue2 = (boolean) b.get("param_boolean_value");
+
+                Log.d(TAG, "Bundle " + b);
+                Log.d(TAG, "Boolean Value 1: " + bValue1);
+                Log.d(TAG, "Boolean Value 2: " + bValue2);
+
+                // boolean b = b.ge
+
+
+            } catch (Exception e) {
+
+                Log.d(TAG, "Exception " + e.getMessage());
+            }
+
         }
 
     }
