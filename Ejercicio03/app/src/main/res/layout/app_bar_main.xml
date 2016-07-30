@@ -21,7 +21,15 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+
+    <!--- Change to
+    <include layout="@layout/content_seccion_01" />
+    -->
+    <include
+        android:id="@+id/include_content_id"
+        layout="@layout/content_main" />
+
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

@@ -2,6 +2,7 @@ package io.github.pabloezequiel.android.ejercicio03;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +21,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewStub;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -49,6 +53,29 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        // Change include programatically
+        /*
+        ViewStub stub = (ViewStub) findViewById(R.id.include_content_id);
+        stub.setLayoutResource(R.layout.content_seccion_01);
+        View inflated = stub.inflate();
+        */
+
+        /*
+        // get your outer relative layout
+        LinearLayout rl = (LinearLayout) findViewById(R.id.include_content_id);
+
+
+        // inflate content layout and add it to the relative layout as second child
+        // add as second child, therefore pass index 1 (0,1,...)
+
+        LayoutInflater layoutInflater = (LayoutInflater)
+                this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        rl.addView(1, layoutInflater.inflate(R.layout.content_layout, this, false) );
+        */
+
+
     }
 
     @Override
@@ -119,6 +146,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
             Log.d(TAG, "Opcion 05: Share");
+
+            invokeShareIntent(this);
 
         } else if (id == R.id.nav_send) {
 
@@ -260,11 +289,46 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+    /**
+     * Share Intent
+     * 2.2. Example: Using the share intent
+     * http://www.vogella.com/tutorials/AndroidIntent/article.html#starting-other-android-components-via-intents
+     * @param activity
+     *
+     * OK ... Puedo compartir
+     * Pero que comparto ¿?
+     */
+    public static void invokeShareIntent(Activity activity) {
+
+        String textToShare = "Chess Lab for Android!";
+        String urlToShare = "https://play.google.com/store/apps/details?id=io.github.pabloezequiel.chesslab";
+        String text = textToShare + "\n" + urlToShare;
+
+        // this runs, for example, after a button click
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
+        activity.startActivity(intent);
+    }
+
+
     // OTROS
     // Content Provider
     // https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/
     // https://elbauldelprogramador.com/programacion-android-implementando-un/
     // Interesante .. pero no se para que lo podría llegar a utilizar
 
+
+
+    public static void changeInclude(Activity activity) {
+
+        String text = "ddd";
+
+        // this runs, for example, after a button click
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
+        activity.startActivity(intent);
+    }
 
 }
