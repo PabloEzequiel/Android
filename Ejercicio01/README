@@ -1,4 +1,12 @@
 Ejercicio 01: 
 
-Se definene dos fragmentos, y cuando haces 
+**Comunicación entre fragments**
+
+Se definene dos fragmentos, y cuando se hace 
 click en un fragmento se cambia el texto del segundo y viceversa.
+
+**Fragment communication: **
+
+There are two freagments defined.
+When you  click on the first one, the color text in the second is changed
+
