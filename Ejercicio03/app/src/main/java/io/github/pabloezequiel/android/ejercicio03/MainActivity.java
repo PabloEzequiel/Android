@@ -331,4 +331,13 @@ public class MainActivity extends AppCompatActivity
         activity.startActivity(intent);
     }
 
+
+    // For more advances guidelnes
+    // https://guides.codepath.com/android/Design-Support-Library
+    // https://guides.codepath.com/android/Material-Design-Primer
+    // Muy bueno !!
+    // https://guides.codepath.com/android/Handling-Scrolls-with-CoordinatorLayout
+
 }
+
+

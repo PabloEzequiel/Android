@@ -3,6 +3,7 @@ package io.github.pabloezequiel.android.ejercicio03;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.util.Log;
 
 /**
@@ -54,6 +55,14 @@ public class Seccion_01_Activity extends Activity {
 
                 Log.d(TAG, "Exception " + e.getMessage());
             }
+
+
+
+            TextInputLayout usernameTextInputLayout =
+                    (TextInputLayout) this.findViewById(R.id.username_text_input_layout);
+            usernameTextInputLayout.setErrorEnabled(true);
+
+            // usernameTextInputLayout.setError(R.string.username_required);
 
         }
 
